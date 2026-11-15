@@ -1,0 +1,9 @@
+{
+  "appId": "com.wird.app",
+  "appName": "وِرد",
+  "webDir": "dist",
+  "backgroundColor": "#060B12",
+  "plugins": {
+    "SplashScreen": { "launchAutoHide": false, "backgroundColor": "#060B12", "showSpinner": false }
+  }
+}
