@@ -24,7 +24,7 @@ export default function Wird({ items, next, onClose }) {
   const view = { idx: (s, a) => map[s * 1000 + a] ?? -1, masked: tab === 1, R, cur, tap: (i) => { haptic(); setR((r) => r.map((v, k) => (k === i ? !v : v))) } }
   useEffect(() => { if (m) document.querySelector(tab === 1 && cur >= 0 ? '.w.cur' : '.w:not(.x)')?.scrollIntoView({ block: 'center', behavior: 'smooth' }) }, [R, tab, !!m]) // eslint-disable-line
   const all = R.every(Boolean)
-  const done = () => { complete(items, next); haptic('heavy'); toast('تقبّل الله منك 🤍'); onClose() }
+  const done = () => { const b = useStore.getState(); const ready = b.examEvery > 0 && b.pending.length + 1 >= b.examEvery; complete(items, next); haptic('heavy'); toast(ready ? 'تقبّل الله منك. اختبار التسميع جاهز الآن.' : 'تقبّل الله منك'); onClose() }
   const pages = []
   if (m) for (let p = p1; p <= p2; p++) pages.push(<MushafPage key={p} p={p} {...m} view={view} />)
   return (

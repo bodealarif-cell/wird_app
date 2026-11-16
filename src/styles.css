@@ -104,3 +104,56 @@ input,textarea,select{font:inherit;color:var(--text);user-select:text;-webkit-us
 .logo{display:block}
 .pop{animation:pop .5s cubic-bezier(.2,1.2,.3,1)}
 @keyframes pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* ===== زخارف صفحة المصحف (v2) ===== */
+[data-paper=classic]{--rose:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='8' fill='%232A9DB5' stroke='white' stroke-opacity='.9' stroke-width='2'/%3E%3Cg fill='none' stroke='white' stroke-width='1.7'%3E%3Crect x='11' y='11' width='18' height='18'/%3E%3Crect x='11' y='11' width='18' height='18' transform='rotate%2845 20 20%29'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='2.6' fill='white'/%3E%3C/svg%3E");--star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%232A9DB5' stroke-width='1.6'%3E%3Crect x='9' y='9' width='22' height='22'/%3E%3Crect x='9' y='9' width='22' height='22' transform='rotate%2845 20 20%29'/%3E%3C/g%3E%3C/svg%3E");--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .38 0 0 0 0 .3 0 0 0 0 .18 0 0 0 .085 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E");--stk1:#cfc8b5;--stk2:#e9e3d3;--stk3:#b7af9a}
+[data-paper=cream]{--rose:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='8' fill='%23B58B3C' stroke='white' stroke-opacity='.9' stroke-width='2'/%3E%3Cg fill='none' stroke='white' stroke-width='1.7'%3E%3Crect x='11' y='11' width='18' height='18'/%3E%3Crect x='11' y='11' width='18' height='18' transform='rotate%2845 20 20%29'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='2.6' fill='white'/%3E%3C/svg%3E");--star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23B58B3C' stroke-width='1.6'%3E%3Crect x='9' y='9' width='22' height='22'/%3E%3Crect x='9' y='9' width='22' height='22' transform='rotate%2845 20 20%29'/%3E%3C/g%3E%3C/svg%3E");--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .38 0 0 0 0 .3 0 0 0 0 .18 0 0 0 .10 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E");--stk1:#cdbf9c;--stk2:#e6dbbd;--stk3:#b3a47f}
+[data-paper=night]{--rose:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='8' fill='%231C5F72' stroke='white' stroke-opacity='.9' stroke-width='2'/%3E%3Cg fill='none' stroke='white' stroke-width='1.7'%3E%3Crect x='11' y='11' width='18' height='18'/%3E%3Crect x='11' y='11' width='18' height='18' transform='rotate%2845 20 20%29'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='2.6' fill='white'/%3E%3C/svg%3E");--star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%231C5F72' stroke-width='1.6'%3E%3Crect x='9' y='9' width='22' height='22'/%3E%3Crect x='9' y='9' width='22' height='22' transform='rotate%2845 20 20%29'/%3E%3C/g%3E%3C/svg%3E");--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .38 0 0 0 0 .3 0 0 0 0 .18 0 0 0 .0 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29'/%3E%3C/svg%3E");--stk1:#0a1016;--stk2:#141c25;--stk3:#05080c}
+.mp{position:relative;box-shadow:inset 0 0 0 1px rgba(0,0,0,.4),-1px 0 0 var(--stk1),-2px 0 0 var(--stk2),-3px 0 0 var(--stk1),-4px 0 0 var(--stk2),-5px 0 0 var(--stk3),0 18px 44px rgba(0,0,0,.34);border-radius:6px 10px 10px 6px;contain:layout style}
+.mp::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(to left,rgba(0,0,0,.26),rgba(0,0,0,.07) 7%,transparent 16%),linear-gradient(to right,rgba(0,0,0,.07),transparent 5%)}
+.mp-in{background-color:var(--pp);background-image:var(--grain);border-radius:3px;box-shadow:0 0 0 2px var(--pp),0 0 0 3px var(--pfl)}
+.cn{position:absolute;width:calc(var(--band)*1.9);height:calc(var(--band)*1.9);background:var(--rose) center/contain no-repeat;z-index:2}
+.cn.tl{top:calc(var(--band)*-.45);left:calc(var(--band)*-.45)}.cn.tr{top:calc(var(--band)*-.45);right:calc(var(--band)*-.45)}
+.cn.bl{bottom:calc(var(--band)*-.45);left:calc(var(--band)*-.45)}.cn.br{bottom:calc(var(--band)*-.45);right:calc(var(--band)*-.45)}
+.cart{position:relative;border-radius:8px}
+.cart::before,.cart::after,.sh::before,.sh::after{content:"";position:absolute;top:50%;width:.62em;height:.62em;background:var(--pp);border:1.5px solid var(--pf);transform:translateY(-50%) rotate(45deg)}
+.cart::before{inset-inline-start:-.46em}.cart::after{inset-inline-end:-.46em}
+.sh{position:relative}.sh::before{inset-inline-start:-.3em}.sh::after{inset-inline-end:-.3em}
+.cart.pn{width:2.7em;height:2.7em;display:grid;place-items:center;padding:0;border:0;outline:0;border-radius:0;background:var(--star) center/130% no-repeat;font-size:calc(var(--fs)*.62)}
+.cart.pn::before,.cart.pn::after{display:none}
+.w.sel{background:color-mix(in srgb,var(--pf) 24%,transparent);border-radius:7px;box-shadow:0 0 0 2px color-mix(in srgb,var(--pf) 24%,transparent)}
+.w[data-ay]{cursor:pointer}
+
+/* ===== زجاج (Liquid Glass) وقارئ المصحف v2 ===== */
+.glass{background:color-mix(in srgb,var(--surface) 58%,transparent);backdrop-filter:blur(26px) saturate(1.7);-webkit-backdrop-filter:blur(26px) saturate(1.7);border:1px solid rgba(255,255,255,.16);box-shadow:0 18px 44px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.22),inset 0 -1px 0 rgba(255,255,255,.05)}
+[data-theme=light] .glass{background:color-mix(in srgb,#fff 64%,transparent);border-color:rgba(255,255,255,.85);box-shadow:0 18px 44px rgba(20,60,80,.16),inset 0 1px 0 #fff}
+.tabbar{background:color-mix(in srgb,var(--surface) 58%,transparent)}
+.sheet{background:color-mix(in srgb,var(--surface) 78%,transparent);backdrop-filter:blur(30px) saturate(1.6);-webkit-backdrop-filter:blur(30px) saturate(1.6)}
+.banner{position:fixed;top:calc(var(--sat) + .55rem);inset-inline:0;margin-inline:auto;width:min(92%,26rem);z-index:80;border-radius:28px;padding:.75rem .95rem;display:flex;gap:.8rem;align-items:center;touch-action:none}
+.banner .bt{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted)}
+.banner .bm{font-size:.95rem;line-height:1.55;color:var(--text)}
+.flip{position:relative;perspective:1900px;touch-action:pan-y;overflow:hidden}
+.flip-layer{position:absolute;inset:0;backface-visibility:hidden;will-change:transform}
+.flip-shade{position:absolute;inset:0;background:linear-gradient(to left,#000,rgba(0,0,0,.55));pointer-events:none}
+.cellpage{overflow-y:auto;overflow-x:auto;scrollbar-width:none;padding:calc(var(--sat) + 4.4rem) 0 calc(var(--sab) + 6.2rem);-webkit-overflow-scrolling:touch}
+.cellpage::-webkit-scrollbar,.vscroll::-webkit-scrollbar{display:none}
+.vscroll{overflow-y:auto;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tscrim{position:absolute;inset:0;z-index:35;background:rgba(0,0,0,.26);backdrop-filter:blur(12px) saturate(1.2);-webkit-backdrop-filter:blur(12px) saturate(1.2)}
+.tpanel{position:absolute;inset-inline:.8rem;bottom:calc(var(--sab) + .8rem);z-index:36;border-radius:30px;padding:1rem 1.1rem 1.1rem;max-height:74%;display:flex;flex-direction:column}
+.tayah{font-family:'Hafs','Amiri Quran',serif;font-size:1.55rem;line-height:2.1;text-align:center;padding:.3rem .2rem .6rem;border-bottom:1px solid var(--line);margin-bottom:.5rem;color:var(--text)}
+.tbody{overflow-y:auto;line-height:2;font-size:1.02rem;min-height:4rem;user-select:text;-webkit-user-select:text}
+.range{width:100%;accent-color:var(--accent);margin:.5rem 0}
+.q-shown{font-family:'Hafs','Amiri Quran',serif;font-size:1.75rem;line-height:2.3;text-align:center;direction:rtl;padding:.4rem 0}
+.ta{width:100%;min-height:6.5rem;border-radius:20px;padding:1rem;background:var(--surface2);border:1px solid var(--line);font-family:'Hafs','Amiri Quran',serif;font-size:1.4rem;line-height:2;direction:rtl;outline:none;resize:none}
+.ta:focus{border-color:var(--accent)}
+.L-ok{color:#37d69b}.L-bad{color:#ff6b6b}.L-opt{opacity:.55}
+.exam-ready{border-color:color-mix(in srgb,var(--accent) 55%,transparent);background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 14%,var(--surface)),var(--surface))}
+.logo{display:block;flex:none}.logo svg{display:block}
+.tpanel{max-height:78%;overflow:hidden}
+.tayah{font-size:1.4rem;line-height:2.05;max-height:32vh;overflow-y:auto;flex:none;scrollbar-width:none}
+.tbody{flex:1 1 auto;min-height:4.5rem;overflow-y:auto}
+.w.sel{background:color-mix(in srgb,var(--pf) 20%,transparent);border-radius:5px;box-shadow:none}
+
+.banner.glass{background:color-mix(in srgb,var(--surface) 82%,transparent)}
+.tpanel.glass{background:color-mix(in srgb,var(--surface) 86%,transparent)}
+[data-theme=light] .banner.glass,[data-theme=light] .tpanel.glass{background:color-mix(in srgb,#fff 84%,transparent)}

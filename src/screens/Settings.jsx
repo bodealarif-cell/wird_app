@@ -6,6 +6,7 @@ import { useStore, snapshot } from '../store'
 import { useUI } from '../ui-store'
 import { ACCENTS, PAPERS } from '../lib/theme'
 import { ar } from '../lib/quran'
+import { TAFSIRS } from '../lib/tafsir'
 import { haptic, shareApp, shareText, setReminder } from '../lib/native'
 import { VERSION } from '../config'
 
@@ -85,6 +86,13 @@ export default function Settings() {
       <div className="list">
         <Item icon={Maximize2} title="ملاءمة الصفحة للشاشة" sub="تصغير الصفحة لتظهر كاملة دون تمرير" right={<Toggle on={s.fitScreen} onChange={(fitScreen) => set({ fitScreen })} />} />
         <Item icon={Vibrate} title="الاهتزاز الخفيف" sub="عند الضغط على الأزرار وكشف الآيات" right={<Toggle on={s.haptics} onChange={(haptics) => set({ haptics })} />} />
+      </div>
+
+      <Sec>الاختبار والتفسير</Sec>
+      <div className="list">
+        <Item icon={Target} title="اختبار التسميع" sub={s.examEvery ? `يُفتح بعد كل ${ar(s.examEvery)} ورد (٠ = متوقف)` : 'متوقف'} right={<Mini v={s.examEvery} min={0} max={5} on={(examEvery) => set({ examEvery })} />} />
+        {TAFSIRS.length > 0 ? <div className="item" style={{ display: 'block' }}><div className="t" style={{ marginBottom: '.6rem' }}>التفسير المختار</div><div className="chips">{TAFSIRS.map((t) => <button key={t.id} className={'chip' + ((s.tafsir || TAFSIRS[0].id) === t.id ? ' on' : '')} onClick={() => set({ tafsir: t.id })}>{t.name}</button>)}</div></div>
+          : <Item icon={Info} title="التفسير" sub="لا توجد تفاسير مضافة في هذه النسخة بعد" />}
       </div>
 
       <Sec>التذكير</Sec>

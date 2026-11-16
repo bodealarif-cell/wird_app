@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Check, BookOpen, Share2, Target, Compass, Play } from 'lucide-react'
+import { Check, BookOpen, Share2, Target, Compass, Play, PenLine } from 'lucide-react'
 import { Mark } from '../components/Logo'
 import { Btn, Sheet } from '../components/ui'
 import { useStore } from '../store'
@@ -9,7 +9,8 @@ import { shareApp } from '../lib/native'
 
 export default function Home() {
   const s = useStore()
-  const { setTab, openWird } = useUI()
+  const { setTab, openWird, openExam } = useUI()
+  const exOn = s.examEvery > 0, exReady = exOn && s.pending.length >= s.examEvery, lastEx = s.exams[s.exams.length - 1]
   const [pick, setPick] = useState(false)
   const [pv, setPv] = useState({ s: 1, a: 1 })
   const r = s.ptr ? take(s.ptr.s, s.ptr.a, s.cap, s.dir) : { it: [], next: null }
@@ -41,6 +42,17 @@ export default function Home() {
       ) : (
         <div className="card c"><div className="display accent" style={{ fontSize: '1.4rem' }}>بلغتَ نهاية المصحف، ما شاء الله</div><p className="muted">اختر وردًا جديدًا من أي موضع.</p></div>
       )}
+      {exOn && (exReady ? (
+        <div className="card exam-ready">
+          <div className="row sp"><span className="eyebrow accent">اختبار التسميع</span><PenLine size={18} className="accent" /></div>
+          <div className="display" style={{ fontSize: '1.3rem', margin: '.4rem 0 .2rem' }}>جاهز: ورداك الأخيران</div>
+          <p className="muted" style={{ margin: '0 0 .9rem', fontSize: '.9rem' }}>أسئلة قصيرة: أعطيك بداية الآية وتكتب باقيها.</p>
+          <Btn icon={PenLine} onClick={() => openExam(s.pending)}>ابدأ الاختبار</Btn>
+        </div>) : (
+        <div className="card row sp" style={{ padding: '.9rem 1.1rem' }}>
+          <span className="muted" style={{ fontSize: '.9rem' }}>اختبار التسميع بعد {ar(s.examEvery - s.pending.length)} ورد</span>
+          {lastEx && <span className="chip">آخر نتيجة {ar(Math.round(lastEx.avg * 100))}٪</span>}
+        </div>))}
       <div className="card">
         <div className="row sp"><span className="eyebrow">هدف هذا الأسبوع</span><Target size={18} className="muted" /></div>
         <div style={{ margin: '.4rem 0 1rem' }}>{weekN ? <>حفظتَ <span className="display accent" style={{ fontSize: '1.9rem' }}>{ar(weekN)}</span> <span className="muted">من {ar(s.cap * s.days)} آية</span></> : <span className="muted">هدفك هذا الأسبوع <b className="accent">{ar(s.cap * s.days)}</b> آية، وأول خطوة هي ورد اليوم</span>}</div>
